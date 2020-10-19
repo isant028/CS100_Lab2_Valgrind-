@@ -1,3 +1,4 @@
+
 #include "person.h"
 #include <iostream>
 #include <string.h>
@@ -16,7 +17,9 @@ Person::Person(char *name, Person* father, Person* mother){
 }
 
 Person::~Person(){
-    delete children;
+	delete [] name;
+    delete [] children;
+
 }
 
 void Person::addChild(Person *newChild){
